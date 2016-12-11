@@ -1,0 +1,7 @@
+connection.diver=org.hsqldb.jdbcDriver
+connection.url=jdbc:hsqldb:file:db/usermanagement
+connection.user=sa
+connection.password=
+
+dao.factory=com.nixsolution.usermanagment.db.DaoFactoryImpl
+dao.com.nixsolutions.usermanagment.usermanagement.db.UserDao=com.nixsolutions.usermanagment.db.HsqldbUserDao

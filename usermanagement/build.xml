@@ -1,33 +1,34 @@
-<project name="usermanage" basedir="." default="test"> 
+<project name="usermanagement" basedir = "." default="test">
 
-<property name="main-java-dir" value="${basedir}/src/main/java"/>
-<property name="test-java-dir" value="${basedir}/src/test/java"/> 
-<property name="build-dir" value="${basedir}/bin"/> 
+	<property name = "main-java-dir" value = "${basedir}/src/main/java"/>
+	<property name = "build-dir" value = "${basedir}/bin"/>
+	<property name = "test-java-dir" value = "${basedir}/src/test/java"/>
+	
+	
+	<target name="clean">
+	<delete dir="${build-dir}"/>
+	</target>
+	
 
-<target name="clean"> 
-<delete dir="${build-dir}"/> 
-</target> 
-
-<target name="init"> 
-<mkdir dir="${build-dir}"/> 
-</target> 
-
-<target name="compile" depends="init"> 
-<javac srcdir="${main-java-dir}" destdir="${build-dir}"/> 
-</target> 
-
-<target name="test-compile"> 
-<javac srcdir="${test-java-dir}" destdir="${build-dir}"/> 
-
-</target> 
-<target name="test" depends="test-compile"> 
-<junit> 
-<classpath> 
-<pathelement location="${build-dir}"/> 
-</classpath> 
-<formatter type="plain"/> 
-<test name="com.nixolution.usermanage.UserTest"> 
-</test> 
-</junit> 
-</target> 
+	<target name="init">
+	<mkdir dir="${build-dir}"/>
+	</target>
+	
+	<target name="compile" depends="init">
+	<javac srcdir="${main-java-dir}" destdir="${build-dir}"/>
+	</target>
+	
+	<target name="test-compile">
+	<javac srcdir="${test-java-dir}" destdir="${build-dir}"/>
+	</target>
+	
+	<target name="test" depends="test-compile">
+	<junit>
+		<classpath>
+		<pathelement location = "${build-dir}"/>
+		</classpath>
+		<formatter type="plain"/>
+		<test name="com.nixsolution.usermanagement.UserTest"></test>
+	</junit>
+	</target>
 </project>
