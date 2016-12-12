@@ -53,7 +53,7 @@ public class BrowseServletTest extends MockServletTestCase {
 	public void testDelete() {
 	       
 	       // create user
-	       User user = new User(new Long(1000), "Anatolii", "Horodovenko", new Date());
+	       User user = new User(new Long(1000), "Danilo", "Kosmin", new Date());
 	       // simulate find
 	       getMockUserDao().expectAndReturn("find", new Long(1000), user);
 	       // simulate deletion

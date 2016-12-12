@@ -89,8 +89,8 @@ public class MainFrameTest extends JFCTestCase {
 	}
 	
 	public void testAddUser(){
-		String firstName = "Vladka";
-		String lastName = "Beliu";
+		String firstName = "Petro";
+		String lastName = "Petrov";
 		Date now = new Date();
 		
 		User user = new User(firstName, lastName, now);
